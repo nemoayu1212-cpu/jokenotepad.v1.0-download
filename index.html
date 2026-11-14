@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ダウンロードポータル</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Meiryo', 'Yu Gothic', sans-serif;
+      /* ピンクのストライプ背景 */
+      background: repeating-linear-gradient(
+        45deg,
+        #ffebf0,
+        #ffebf0 20px,
+        #ffe1ea 20px,
+        #ffe1ea 40px
+      );
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 40px 50px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 400px;
+      max-width: 90%;
+    }
+
+    h1 {
+      font-size: 20px;
+      color: #333333;
+      margin-bottom: 30px;
+    }
+
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 12px 20px;
+      font-size: 15px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.2s, transform 0.1s;
+      cursor: pointer;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    /* 1つ目のボタン：ウェブサイトへ繋がるやつ */
+    .btn-web {
+      background-color: #0078d7;
+      color: #ffffff;
+      border: none;
+    }
+
+    .btn-web:hover {
+      background-color: #005a9e;
+    }
+
+    /* 2つ目のボタン：エブゼをダウンロードするやつ */
+    .btn-exe {
+      background-color: #28a745;
+      color: #ffffff;
+      border: none;
+    }
+
+    .btn-exe:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>アプリダウンロード</h1>
+    <div class="button-group">
+      <!-- 1つ目のボタン：ウェブサイトへ -->
+      <a href="https://downloadpage-omega.vercel.app" class="btn btn-web" target="_blank">ウェブサイトを開く</a>
+      
+      <!-- 2つ目のボタン：エブゼのダウンロード -->
+      <a href="./jokesetup.exe" class="btn btn-exe" download>アプリ(.exe)をダウンロード</a>
+    </div>
+  </div>
+
+</body>
+</html>
